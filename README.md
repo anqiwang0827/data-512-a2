@@ -11,7 +11,8 @@ B - B-class article
 C - C-class article   
 Start - Start-class article   
 Stub - Stub-class article   
-And a csv file will be saved after calculating score for each article and combining with population dataset with following attributes:   
+
+And a csv file will be saved after calculating score for each article and combining with population dataset as wikipedia_article_population.csv. And it has following attributes:   
 
 | Column         | 
 | ------------------|
@@ -22,6 +23,7 @@ And a csv file will be saved after calculating score for each article and combin
 | population      |
 
 For analysis, I calculated the proportion of articles per capita (number of articles regarding politicians divided by the population) and high-quality articles (number of high-quality articles divided by the total articles regarding politicians) for each country. An article is 'high-quality' when 'ORES' evaluates it in the 'FA (Featured Article)' or 'GA (Good Article)' category.  
+
 There will be four visualizations generated for this assignment:   
 10 countries with the highest proportion of politician articles per capita.   
 10 countries with the lowest proportion of politician articles per capita.   
@@ -82,6 +84,9 @@ https://wikimediafoundation.org/wiki/Terms_of_Use/en
 
 The population data is from Population Research Bureau website.http://www.prb.org/DataFinder/Topic/Rankings.aspx?ind=14. The population dataset can be downloaded as 'Population Mid-2015.csv' and used in latter analysis. The dataset has 21 rows (210 countries in total) and 5 variables: Location,  Location Type, TimeFrame, DataType and Data.
 'Location' is the country name. 'Location Type' is always 'Country'.' TimeFrame' is 'Mid-2015'. Data Type is 'Number'. And 'Data' is the country population. We will extract only country name sand population variables for analysis.   
+
+License of the source data:  
+Population Reserach Bureau copyright
 
 And for Wikipedia articles, I used a machine learning algorithm 'ORES' (Objective revision Evaluation service) to evaluate the quality of each article. ORES reads article revision id as an input and it will output a quality score  and probabilities the the article's predicted quality for each article.  I extracted only the predicted quality score for analysis. 
 
